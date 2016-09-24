@@ -1,0 +1,107 @@
+---
+layout: default_l1
+title:  "Authentication & registration"
+date:   2016-09-21 19:53:22 +0530
+categories: usage
+---
+<div class="page-header">
+    <h1>Authentication & registration</h1>
+</div>
+
+<ul class="list-unstyled">
+    <li>
+    <a href="#authentication_and_registration">Authentication & registration</a>
+    <ul>
+        <li><a href="#user_signin">User signin</a></li>
+        <li><a href="#remember_me">Remember me</a></li>
+        <li><a href="#forgot_your_password">Forgot your password</a></li>
+        <li><a href="#user_signup">User signup</a></li>
+    </ul>
+    </li> 
+</ul>
+
+<hr>
+
+<h2 id="authentication_and_registration">Authentication & registration</h2>
+
+<h3 id="user_signin">User signin</h3>
+
+<p>Users and administrators can signin/login to the <b>Userpanel</b> by simply typing <code>http://[root]/users/signin/</code> URL on your web browser address bar and hitting the <kbd>enter key</kbd> on your keyboard. then <b>Userpanel</b> should display a signin/login form like in bellow image.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/usage/signin_view.png">
+<img class="img-responsive" src="../assets/img/content/usage/signin_view.png" alt="signin view">
+</a>
+
+<p>Then users can type their registered <b>email address</b> and <b>password</b> and hit the signin button. if email address and password combination correct, user will be able to signed into their <b>UserPanel</b> account.</p>
+
+<p>If user <b>email address</b> and <b>password</b> combination is incorrect. <b>UserPanel</b> will throw a error like in bellow image and user wont be able to signed into their account.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/usage/signin_wrong_user_credencials.png">
+<img class="img-responsive" src="../assets/img/content/usage/signin_wrong_user_credencials.png" alt="wrong signin credencials view">
+</a>
+
+<h3 id="remember_me">Remember me</h3>
+
+<p><b>UserPanel</b> comes with <b>Remember me</b> feature. this feature can be access on user signin/login form.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/usage/remember_me_feature.png">
+<img class="img-responsive" src="../assets/img/content/usage/remember_me_feature.png" alt="remember me feature">
+</a>
+
+<div class="alert alert-info margin_tb_gutter" role="alert">
+<b>Note:</b> <b>Remember me</b> feature is accessible only if that option is enabled by system administrator.
+</div>
+
+<p>When user check the <b>Remember me</b> checkbox at the <b>UserPanel signin form</b>, user's signin/login will be remembered for up to 30 days, even after user close web browser. The next time user open the same browser within 30 days, user will be automatically signed/logged in.</p>
+
+<p>In order for <b>Remember me</b> to function, you should not click the <b>logout</b> button in the <b>UserPanel</b> application, but simply close your browser after you have finished.</p>
+
+<p>However, to protect the security of your account information, including email, name, address, phone, etc., <b>UserPanel</b> encourages users to signout/logout at the end of each session, and not use the <b>Remember me</b> feature!</p>
+
+<div class="alert alert-warning margin_tb_gutter" role="alert">
+<b>Warning:</b> by using the <b>Remember me</b> option, you make it easier to signin/login again, but this also means that anyone with access to the computer where you selected <b>Remember me</b> will be able to signin/login to your account. Do <b>not</b> use <b>Remember me</b> on any public computer, on campus, in Internet cafe's, or anywhere else where you cannot control access!
+</div>
+
+<h3 id="forgot_your_password">Forgot your password</h3>
+
+<p>If user forgot his/her password, user will be able to reset it from <b>Password reset</b> form. which can be access by simply clicking on <b>Forgot your password?</b> link on the user signin/login form.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/usage/forgot_your_password_feature.png">
+<img class="img-responsive" src="../assets/img/content/usage/forgot_your_password_feature.png" alt="forgot your password feature">
+</a>
+
+<p>If user is <b>not</b> signedin, password reset form will be looks like this.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/usage/not_signedin_password_reset_form.png">
+<img class="img-responsive" src="../assets/img/content/usage/not_signedin_password_reset_form.png" alt="not signedin password reset form">
+</a>
+
+<p>If user is <b>signedin</b>, user's primary email address will be automatically selects by the <b>UserPanel</b>. and password reset form will be looks like this.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/usage/signedin_password_reset_form.png">
+<img class="img-responsive" src="../assets/img/content/usage/signedin_password_reset_form.png" alt="signedin password reset form">
+</a>
+
+<div class="alert alert-info margin_tb_gutter" role="alert">
+<b>Note:</b> <b>Password reset</b> feature is accessible only if that option is enabled by system administrator.
+</div>
+
+<p>If user is not signedin then user can simply type his/her email address that associated with his/her account and hit <b>Continue</b> button. if that email address associated with an user account, then <b>UserPanel</b> will  be send a email with a <b>password reset</b> link to that email address. that link will only be valid for a predefined period of time, which is defined by the system administrator. and if user email address not in associated with an <b>Userpanel</b> account, then password reset form will be throw an error.</p>
+
+<p>After received that password reset email, users can click the password reset link in that email. if password reset link is not expired, then password reset form will be displayed and allows users to set their new password.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/usage/create_new_password.png">
+<img class="img-responsive" src="../assets/img/content/usage/create_new_password.png" alt="create new password">
+</a>
+
+<h3 id="user_signup">User signup</h3>
+
+<p><b>UserPanel</b> administrators can add/register new users by themselves. or allow users to signup/register by themselves. user signup feature is completely optional and can be disabled from <b>UserPanel</b>'s <b>App settings</b>.</p>
+
+<p>If user signup feature is enabled, Users will be able to access the signup form and create a new account by filling user signup form and hit signup button. user signin form also has a link to user signup form called <b>Sign up now</b>.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/usage/user_signup_form.png">
+<img class="img-responsive" src="../assets/img/content/usage/user_signup_form.png" alt="user signup form">
+</a>
+
+<p>Users will be able to signedin/login right after successful registration. if email confirmation switched on in <b>UserPanel</b>'s <b>App settings</b>, email confirmation alert will display with a link to confirmation email resend option. and user status also automatically change to <b>confirmed</b> from user status <b>unconfirmed</b>. if email confirmation switched off, then that kind of alert will not gonna display. also administrators have to manually change registered user's user status from unconfirmed to confirmed.</p>

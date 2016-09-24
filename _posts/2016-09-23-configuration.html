@@ -1,0 +1,108 @@
+---
+layout: default_l1
+title:  "Configuration"
+date:   2016-09-23 11:25:47 +0530
+categories: setup
+---
+<div class="page-header">
+    <h1>Configuration</h1>
+</div>
+
+<ul class="list-unstyled">
+    <li>
+    <a href="#configuration">Configuration</a>
+    <ul>
+        <li><a href="#base_url">Base URL</a></li>
+        <li><a href="#htaccess_compatibility">.HTACCESS compatibility</a></li>
+        <li><a href="#database_configuration">Database configuration</a></li>
+    </ul>
+    </li> 
+</ul>
+
+<hr>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>In <b>UserPanel</b> there are no much to <b>configure</b>. only you have to <b>configure</b> very few configuration options.</p>
+
+<h3 id="base_url">Base URL</h3>
+
+<p>To set <b>Base URL</b> in <b>config.php</b> file, follow step by step bellow instructions.</p>
+
+<ol>
+	<li>Open <code>config.php</code> under <i>application/config</i> directory.</li>
+	<li>Find <code>$config['base_url'] = '';</code> and set it with your base URL. e.i. if you are installed <b>UserPanel</b> on <code>localhost</code> then it should be <code>$config['base_url'] = 'http://localhost/userpanel/';</code>, if you are installed <b>UserPanel</b> on remote host with your own domain, then it will be like <code>$config['base_url'] = 'http://www.example.com/';</code></li>
+</ol>
+
+<h4>Localhost example</h4>
+
+<a class="fancybox" rel="group" href="../assets/img/content/setup/localhost_base_url.png">
+<img class="img-responsive" src="../assets/img/content/setup/localhost_base_url.png" alt="localhost base url">
+</a>
+
+<h4>Remotehost example</h4>
+
+<a class="fancybox" rel="group" href="../assets/img/content/setup/remotehost_base_url.png">
+<img class="img-responsive" src="../assets/img/content/setup/remotehost_base_url.png" alt="remotehost base url">
+</a>
+
+<h3 id="htaccess_compatibility">.HTACCESS compatibility</h3>
+
+<p>.HTACCESS support in your webhost is optional for <b>UserPanel</b> thats mean <b>UserPanel</b> can run with or without .HTACCESS support. but you have to configure that is <b>config.php</b> file.</p>
+
+<h4>If .HTACCESS support in your webhost</h4>
+
+<p>If your webhost support for .HTACCESS, then you dont have to do any configurations in <b>config.php</b> file.</p>
+
+<h4>If .HTACCESS not support in your webhost</h4>
+
+<p>If your webhost not support for .HTACCESS, then simply set <code>$config['index_page'] = '';</code> configuration item like <code>$config['index_page'] = 'index.php';</code> in <b>config.php</b> file.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/setup/index_page.png">
+<img class="img-responsive" src="../assets/img/content/setup/index_page.png" alt="index page">
+</a>
+
+<h3 id="database_configuration">Database configuration</h3>
+
+<p>After you create a <b>brand new database</b> for <b>UserPanel</b> app and import <b>userpanel.sql</b> file. you have to do some configurations in <code>database.php</code> file under <i>application/config</i> directory.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/setup/database_config_file.png">
+<img class="img-responsive" src="../assets/img/content/setup/database_config_file.png" alt="database config file">
+</a>
+
+<p>These are the <b>database</b> configurations you have to do.</p>
+
+<pre>
+	<code>
+$active_group = 'default';
+$query_builder = TRUE;
+
+$db['default'] = array(
+	'dsn'	=> '',
+	<b class="text-danger">'hostname' => 'localhost'</b>,
+	<b class="text-danger">'username' => 'root'</b>,
+	<b class="text-danger">'password' => ''</b>,
+	<b class="text-danger">'database' => 'userpanel'</b>,
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
+	</code>
+</pre>
+
+<p>Dont freak out! you dont have to configure all those database configurations. only you have to configure is few of them. please check the bellow image.</p>
+
+<a class="fancybox" rel="group" href="../assets/img/content/setup/db_configurations.png">
+<img class="img-responsive" src="../assets/img/content/setup/db_configurations.png" alt="db configurations">
+</a>
